@@ -1,0 +1,381 @@
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4bc5211a-dc9c-48aa-b7f6-9e279f75a7ec" alt="BioGen Logo" width="200"/>
+
+  
+</div>
+
+
+
+## Sistema de Gestão de Biodigestores
+
+Monitore e otimize o desempenho do seu biodigestor com nosso dashboard completo e intuitivo.
+
+---
+
+## 📖 SOBRE O PROJETO
+
+O projeto **BioGen** propõe uma solução sustentável para o tratamento de resíduos orgânicos provenientes principalmente de indústrias alimentícias, atividades agrícolas e pecuárias. A iniciativa busca transformar esses resíduos em biogás por meio de biodigestores, permitindo a geração de energia elétrica limpa e acessível. A energia produzida pode ser utilizada para abastecimento elétrico ou convertida em gás para uso doméstico. O processo também gera biofertilizantes, aproveitando integralmente os resíduos orgânicos e contribuindo para uma cadeia produtiva mais sustentável.
+
+
+## Nossos Diferenciais
+
+### 🔹 Rastreamento de Resíduos
+Monitore a quantidade de resíduos processados pelo seu biodigestor em tempo real.
+
+---
+
+### 🔹 Geração de Energia
+Acompanhe a energia produzida pelo seu sistema com análises detalhadas.
+
+---
+
+### 🔹 Benefícios Fiscais
+Calcule e visualize os benefícios fiscais da sua produção de energia sustentável.
+
+---
+
+
+## 🎯 **Objetivos de Desenvolvimento Sustentável (ODS)**
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/user-attachments/assets/8a692e01-f884-44a9-9380-eb0d16579ac4" width="80"/>
+        <br><strong>ODS 7</strong><br>Energia Limpa<br>e Acessível
+       </td>
+      </td>
+      <td align="center">
+        <img src="https://github.com/user-attachments/assets/0633144f-a4f3-4999-afae-7dd55b6cdb6c" width="80"/>
+        <br><strong>ODS 10</strong><br>Redução das<br>Desigualdades
+      </td>
+      <td align="center">
+        <img src="https://github.com/user-attachments/assets/8ae4f5c8-9207-43a1-9b28-eb3ca05ec3ec" width="80"/>
+        <br><strong>ODS 12</strong><br>Consumo e Produção<br>Responsáveis
+      </td>
+      <td align="center">
+        <img src="https://github.com/user-attachments/assets/059aeb4f-61ff-42f6-9e2e-8b93e2fecc8d" width="80"/>
+        <br><strong>ODS 13</strong><br>Ação contra a<br>Mudança do Clima
+      </td>
+   </tr>
+  </table>
+</div>
+
+
+
+## 🔗 PROTÓTIPO E DOCUMENTAÇÃO
+
+
+- Link 1
+
+
+## 🔹 Requisitos Funcionais 
+
+
+| Nº do requisito | Nome                         | Descrição |
+|-----------------|------------------------------|-----------|
+| RF001 | Cadastro da Empresa | O sistema tem que ser capaz de registrar e guardar dados obrigatórios como informações de login, informações empresariais e de endereço da empresa. |
+| RF002 | Validação CNPJ | O sistema deve validar o CNPJ, garantindo que os dados sejam reais por meio de consulta a uma API ou verificação de estrutura. |
+| RF003 | Validação CEP | O sistema deve validar o CEP, garantindo que os dados sejam reais por meio de consulta a uma API ou verificação de estrutura. |
+| RF004 | Login | O sistema deve permitir que as empresas acessem suas contas por meio de autenticação com e-mail e senha, verificando as credenciais e redirecionando para o ambiente correspondente. |
+| RF005 | Visualização dos dados | O sistema deve disponibilizar um Dashboard e área com todas as informações volumétricas e de desempenho do sensor. |
+| RF006 | Exportação de dados | O sistema deve permitir a geração de relatórios em três formatos: PDF (com gráficos e análises), Excel (planilha interativa) e CSV (dados brutos). |
+| RF007 | Edição de dados do perfil | O sistema deve permitir a atualização de informações pessoais e configurações da conta. |
+| RF008 | Armazenamento local | Permitir que o usuário altere os indicadores diretamente na própria página, garantindo que as modificações sejam salvas automaticamente no armazenamento local do dispositivo, preservando as configurações mesmo após atualização ou novo acesso ao sistema. |
+
+
+
+
+## 🔹 Requisitos Não Funcionais 
+
+
+| Nº do requisito | Nome | Descrição |
+|-----------------|------|-----------|
+| RNF001 | Linguagem | Utilização de JavaScript, visando garantir consistência. |
+| RNF002 | Segurança | Garantir a proteção dos dados das empresas por meio de mecanismos de autenticação, controle de acesso, criptografia e monitoramento, assegurando confidencialidade, integridade e disponibilidade das informações, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD). |
+| RNF003 | Banco de Dados | Utilização de SupaBase para o gerenciamento do banco de dados. |
+| RNF004 | Interface | Interface com layout responsivo para smartphones. |
+| RNF005 | Framework | Utilizar o React Native para garantir interfaces modernas, responsivas e com melhor experiência do usuário. |
+| RNF006 | Desempenho | O sistema deve carregar em até 3 segundos em conexões padrão. |
+| RNF007 | Hospedagem em Nuvem | O sistema deve ser implantado em uma infraestrutura de computação em Nuvem. |
+| RNF008 | Provedor de Nuvem | O sistema deve ser hospedado na plataforma Amazon Web Services (AWS). |
+| RNF009 | Segurança na Nuvem | O controle de acesso deve ser realizado por meio do AWS Identity and Access Management (IAM), garantindo autenticação e autorização adequadas. |
+| RNF010 | Escalabilidade | A infraestrutura deve permitir escalabilidade automática utilizando serviços como AWS Auto Scaling para suportar aumento de usuários simultâneos. |
+| RNF011 | Armazenamento de objeto no S3 | O sistema deve utilizar o Amazon S3 para armazenamento seguro e escalável de arquivos, garantindo alta durabilidade e disponibilidade dos dados. |
+| RNF012 | Docker | O sistema deve utilizar Docker para conteinerização da aplicação, garantindo portabilidade, padronização do ambiente e facilidade na implantação. |
+| RNF013 | Serverless | O sistema deve adotar arquitetura serverless utilizando AWS Lambda, permitindo escalabilidade automática e redução de custos com infraestrutura. |
+| RNF014 | Acessibilidade | Garantir que o sistema possa ser utilizado por todas as pessoas, incluindo aquelas com deficiência, por meio de recursos como navegação por teclado, contraste adequado, textos alternativos e compatibilidade com leitores de tela, seguindo as diretrizes do World Wide Web Consortium (W3C). |
+
+## 🛠️ TECNOLOGIAS UTILIZADAS
+
+<p align="left">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="Badge HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="Badge CSS3"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="Badge TypeScript"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Badge Node.js"/>
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Badge Git"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Badge GitHub"/>
+  <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black" alt="Badge Swagger"/>
+  <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Badge Visual Studio Code"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Badge Docker"/>
+  <img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" alt="Expo"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="Nginx"/>
+  <img src="https://img.shields.io/badge/DuckDNS-DE5B49?style=for-the-badge" alt="DuckDNS"/>
+  
+</p>
+
+##  🖥️ **Integrações AWS**
+
+<img width="1149" height="1073" alt="Image" src="https://github.com/user-attachments/assets/2fbb2ad3-e16a-4511-8ea5-5a09f5506b06" />
+
+- **S3:** Armazenamento de fotos de perfil.
+  
+- **Lâmbda(Serveless):** Foram criadas stacks para envio de notificação em caso de alteração nos sensores.
+  
+- **EC2:** Foi implementado o mongoDB com uma API exposta por PM2.
+  
+- **Amazon RDS:** Foi implementado o banco de dados relacional Postgre.
+  
+- **CloudWatch:** Foi implementado a Api de Geolocalização.
+
+
+
+## ⚙️ **API Endpoints**
+
+### 📍Mapas e Marcadores (Geolocalização - MongoDB):
+- **GET /api/markers** - Retorna a lista de todos os marcadores cadastrados.
+- **POST /api/markers** - Cria um novo marcador ou o atualiza 
+- **DELETE /api/markers/:id** - Remove um marcador através do seu ID.
+
+### 🔐 Autenticação (/api/auth)
+Gerencia o login e dados de acesso. Exceto o registro e login, os demais endpoints exigem Token JWT (via authMiddleware).
+
+- **POST /api/auth/register** - Registra um novo usuário no sistema
+- **POST /api/auth/login** - Realiza a autenticação do usuário a partir de email e senha, enviando o token JWT.
+- **GET /api/auth/me (Requer autenticação)** - Busca os dados resumidos do perfil que está atualmente logado.
+- **PUT /api/auth/password (Requer autenticação)** - Permite atualizar a senha do usuário atual.
+
+### 👤 Perfil do Usuário (/api/profile) 
+
+Gerencia os dados e informações da conta cadastrada.
+- **GET /api/profile (Requer autenticação)** - Busca todos os dados pessoais ou empresariais cadastrados no perfil do usuário
+- **PUT /api/profile (Requer autenticação)** - Atualiza (ou insere) informações no perfil
+  
+### 📊 Indicadores do Biodigestor (/api/indicators)
+Responsável pelas métricas visualizadas no dashboard relacionadas ao processamento, geração de energia e economia.
+
+- **GET /api/indicators (Requer autenticação)** - Retorna todo o histórico de indicadores 
+- **POST /api/indicators (Requer autenticação)** - Cria ou atualiza as métricas de um mês e ano específicos (upsert).
+
+### 🔧 Manutenções e Incidentes (/api/maintenance)
+Agendamento e gerenciamento de manutenções no equipamento, bem como os registros de incidentes técnicos. Agendamentos:
+
+- **GET /api/maintenance/schedules (Requer autenticação)** - Busca o histórico listando os 5 agendamentos de manutenção mais recentes do usuário.
+- **POST /api/maintenance/schedules (Requer autenticação)** - Registra uma nova programação de manutenção 
+- **PUT /api/maintenance/schedules/:id (Requer autenticação)** - Permite atualizar o status do agendamento 
+- **DELETE /api/maintenance/schedules/:id (Requer autenticação)** - Exclui uma programação de manutenção do histórico.
+
+### 🔈Incidentes Ativos:
+
+- **GET /api/maintenance/incidents (Requer autenticação)** - Procura e retorna o cenário de incidente/anomalia mais recente registrado 
+- **PUT /api/maintenance/incidents/active (Requer autenticação)** - Marca o incidente mais recente como resolvido
+
+### ⚠️ Alertas de Sensores (/api/alerts)
+Exibição e cadastro dos alertas emitidos automaticamente quando surgem anomalias na máquina.
+
+- **GET /api/alerts (Requer autenticação)** - Retorna as 50 notificações/alertas emitidos mais recentes
+- **POST /api/alerts (Requer autenticação)** - Cria um novo registro de emissão de alerta associado ao usuário
+
+## 📦 **Instalação e Configuração**
+
+### 1. Pré-requisitos
+
+- Node.js (recomenda-se v18 ou superior)
+- npm
+- Git
+- Expo CLI globalmente: `npm install -g expo-cli`
+- Opcional: Docker (para execução em container)
+
+### 2. Clonar o repositório
+
+```bash
+git clone https://github.com/Adejarbas/BioDash_mobile.git
+cd BioDash_mobile
+```
+
+### 3. Instalar dependências do frontend
+
+```bash
+npm install
+```
+
+### 4. Instalar dependências do backend
+
+```bash
+cd backend
+npm install
+```
+
+### 5. Configurar variáveis de ambiente
+
+#### Backend (`backend/.env`)
+
+Crie o arquivo `backend/.env` com as seguintes chaves:
+
+```text
+POSTGRES_URL=postgresql://usuario:senha@host:porta/banco
+MONGODB_URI=mongodb://usuario:senha@host:porta/biodash
+JWT_SECRET=uma_chave_secreta_forte
+CORS_ORIGINS=http://localhost:19006,http://localhost:3000
+AWS_REGION=us-east-1
+S3_BUCKET_NAME=nome-do-seu-bucket
+```
+
+#### Frontend (`.env` na raiz)
+
+Crie o arquivo `.env` no diretório raiz do projeto com estas variáveis:
+
+```text
+EXPO_PUBLIC_API_URL=http://localhost:3003/api
+EXPO_PUBLIC_NEXT_API_URL=http://localhost:3003/api
+EXPO_PUBLIC_SUPABASE_URL=https://<seu-projeto>.supabase.co
+EXPO_PUBLIC_SUPABASE_ANON_KEY=<sua-anon-key>
+```
+
+> Observação: o app usa variáveis de ambiente para conectar ao backend e ao Supabase. Ajuste os valores conforme sua infraestrutura.
+
+### 6. Iniciar o backend localmente
+
+No diretório `backend/` execute:
+
+```bash
+npm run dev
+```
+
+O servidor rodará, por padrão, em `http://localhost:3003`.
+
+### 7. Iniciar o app Expo
+
+Volte ao diretório raiz do projeto e execute:
+
+```bash
+cd ..
+npm start
+```
+
+Ou use comandos específicos:
+
+```bash
+npm run android
+npm run ios
+npm run web
+```
+
+### 8. Testar a aplicação
+
+- Verifique se o backend respondeu com sucesso em `http://localhost:3003/api`
+- Abra o app no Expo
+- Realize login, cadastro e navegação pelas telas do dashboard
+
+### 9. Observações importantes
+
+- `backend/src/server.js` depende de `POSTGRES_URL`, `MONGODB_URI`, `JWT_SECRET` e `CORS_ORIGINS`
+- `src/lib/api.ts` depende de `EXPO_PUBLIC_API_URL` e `EXPO_PUBLIC_NEXT_API_URL`
+- `src/lib/supabase.ts` depende de `EXPO_PUBLIC_SUPABASE_URL` e `EXPO_PUBLIC_SUPABASE_ANON_KEY`
+
+### 10. Dicas para produção
+
+- Nunca comite arquivos `.env`
+- Use serviços gerenciados para PostgreSQL e MongoDB ou contêineres Docker seguros
+- Restrinja `CORS_ORIGINS` apenas aos domínios permitidos
+- Proteja `JWT_SECRET` e chaves AWS
+
+## 👥 EQUIPE
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alessandro Rodrigues</td>
+      <td>
+       <a href="[https://github.com/FernandoRSantos](https://github.com/alerodriguesm02)" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Alessandro Rodrigues">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Ariele Peres</td>
+      <td>
+         <a href="https://github.com/arieleperes" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Ariele Peres">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Daniel Adejarbas</td>
+      <td>
+        <a href="https://github.com/Adejarbas" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Daniel Adejarbas">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Guilherme Piva</td>
+      <td>
+        <a href="https://github.com/guipiva" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Mayara Barros">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Matheus Gueff</td>
+      <td>
+      <a href="https://github.com/MathGueff" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Matheus Gueff">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Mayara Barros</td>
+      <td>
+      <a href="https://github.com/Mayarasb" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Mayara Barros">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Thiago Muniz</td>
+      <td>
+        <a href="https://github.com/Thmn93" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub thiago Muniz">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Vanessa Capuano</td>
+      <td>
+        <a href="https://github.com/Vanessa-Nobrega" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Vanessa Capuano">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Rodapé
+
+©️ 2026 BioDash. Todos os direitos reservados.
+
+
