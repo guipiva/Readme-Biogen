@@ -67,7 +67,11 @@ Calcule e visualize os benefícios fiscais da sua produção de energia sustent�
 ## 🔗 PROTÓTIPO E DOCUMENTAÇÃO
 
 
-- Link 1
+- http://biodash.duckdns.org/
+
+- http://biodash-api.duckdns.org/
+
+- https://drive.google.com/file/d/1cBaFjSCvvmQXrrmZGH64rAcDUtQxmx86/view
 
 
 ## 🔹 Requisitos Funcionais 
@@ -193,109 +197,136 @@ Exibição e cadastro dos alertas emitidos automaticamente quando surgem anomali
 - **GET /api/alerts (Requer autenticação)** - Retorna as 50 notificações/alertas emitidos mais recentes
 - **POST /api/alerts (Requer autenticação)** - Cria um novo registro de emissão de alerta associado ao usuário
 
-## 📦 **Instalação e Configuração**
+## 📦 *Instalação e Configuração*
 
-### 1. Pré-requisitos
+Esta seção descreve os passos necessários para configurar e executar localmente o projeto *BioGen* (tanto o frontend mobile/web em Expo quanto o backend em Node.js), além de instruções para execução via *Docker*.
 
-- Node.js (recomenda-se v18 ou superior)
-- npm
-- Git
-- Expo CLI globalmente: `npm install -g expo-cli`
-- Opcional: Docker (para execução em container)
+---
 
-### 2. Clonar o repositório
+### 📋 Pré-requisitos
 
-```bash
+Antes de iniciar, certifique-se de ter instalado em sua máquina:
+* *Node.js* (versão 20.x recomendada, ou superior)
+* *npm* (gerenciador de pacotes padrão do Node)
+* *Git* (para clonagem do repositório)
+* *Docker & Docker Compose* (opcional, para execução simplificada via contêineres)
+* *Expo Go* (aplicativo móvel disponível para Android/iOS para testar o aplicativo diretamente no seu celular físico)
+
+---
+
+### 💻 Passo 1: Clonar o Repositório
+
+Primeiramente, clone este repositório para o seu ambiente de desenvolvimento local:
+
+bash
 git clone https://github.com/Adejarbas/BioDash_mobile.git
 cd BioDash_mobile
-```
 
-### 3. Instalar dependências do frontend
 
-```bash
-npm install
-```
+---
 
-### 4. Instalar dependências do backend
+### ⚙️ Passo 2: Configuração e Execução do Backend
 
-```bash
-cd backend
-npm install
-```
+O backend é uma API em Node.js construída com Express, que se comunica com o *PostgreSQL (AWS RDS)* e *MongoDB*.
 
-### 5. Configurar variáveis de ambiente
+1. *Acesse o diretório do backend:*
+   bash
+   cd backend
+   
 
-#### Backend (`backend/.env`)
+2. *Crie e configure o arquivo .env:*
+   Crie um arquivo .env na pasta backend com base nas variáveis a seguir:
+   env
+   NODE_ENV=development
+   PORT=3003
+   POSTGRES_URL=sua_string_de_conexao_postgresql_rds
+   JWT_SECRET=sua_chave_secreta_para_jwt
+   MONGODB_URI=sua_string_de_conexao_mongodb
+   CORS_ORIGINS=http://localhost:8081,http://localhost:19006,http://localhost:3000,http://localhost:80
+   
 
-Crie o arquivo `backend/.env` com as seguintes chaves:
+3. *Instale as dependências:*
+   bash
+   npm install
+   
 
-```text
-POSTGRES_URL=postgresql://usuario:senha@host:porta/banco
-MONGODB_URI=mongodb://usuario:senha@host:porta/biodash
-JWT_SECRET=uma_chave_secreta_forte
-CORS_ORIGINS=http://localhost:19006,http://localhost:3000
-AWS_REGION=us-east-1
-S3_BUCKET_NAME=nome-do-seu-bucket
-```
+4. *Inicie o servidor em modo de desenvolvimento:*
+   bash
+   npm run dev
+   
+   O backend estará rodando localmente em http://localhost:3003.
 
-#### Frontend (`.env` na raiz)
+---
 
-Crie o arquivo `.env` no diretório raiz do projeto com estas variáveis:
+### 📱 Passo 3: Configuração e Execução do Frontend (Expo)
 
-```text
-EXPO_PUBLIC_API_URL=http://localhost:3003/api
-EXPO_PUBLIC_NEXT_API_URL=http://localhost:3003/api
-EXPO_PUBLIC_SUPABASE_URL=https://<seu-projeto>.supabase.co
-EXPO_PUBLIC_SUPABASE_ANON_KEY=<sua-anon-key>
-```
+O frontend foi construído utilizando *React Native* com *Expo* e suporta plataformas Mobile (iOS/Android) e Web.
 
-> Observação: o app usa variáveis de ambiente para conectar ao backend e ao Supabase. Ajuste os valores conforme sua infraestrutura.
+1. *Retorne à raiz do projeto:*
+   bash
+   cd ..
+   
 
-### 6. Iniciar o backend localmente
+2. *Configure o arquivo de variáveis de ambiente:*
+   Crie um arquivo .env com base no arquivo .env-exemple:
+   bash
+   cp .env-exemple .env
+   
+   Caso esteja no Windows PowerShell, use:
+   powershell
+   copy .env-exemple .env
+   
+   Edite o .env recém-criado, preenchendo as chaves necessárias:
+   env
+   EXPO_PUBLIC_SUPABASE_URL=sua_url_do_supabase
+   EXPO_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anonima_do_supabase
+   EXPO_PUBLIC_API_URL=http://localhost:3003/api
+   EXPO_PUBLIC_AWS_REGION=us-east-1
+   EXPO_PUBLIC_AWS_BUCKET_NAME=seu_nome_de_bucket_s3
+   EXPO_PUBLIC_AWS_ACCESS_KEY_ID=seu_access_key_id_aws
+   EXPO_PUBLIC_AWS_SECRET_ACCESS_KEY=sua_secret_key_aws
+   
 
-No diretório `backend/` execute:
+3. *Instale as dependências da aplicação:*
+   bash
+   npm install
+   
 
-```bash
-npm run dev
-```
+4. *Inicie o servidor do Expo:*
+   bash
+   npm run start
+   
 
-O servidor rodará, por padrão, em `http://localhost:3003`.
+5. *Execute na plataforma desejada:*
+   * *Mobile (Físico):* Abra o aplicativo *Expo Go* em seu dispositivo móvel e escaneie o *QR Code* gerado no seu terminal.
+   * *Android:* Pressione a no terminal para abrir em um emulador Android (requer Android Studio configurado).
+   * *iOS:* Pressione i no terminal para abrir no simulador iOS (requer macOS e Xcode configurado).
+   * *Web:* Pressione w no terminal para compilar e abrir no navegador web padrão.
 
-### 7. Iniciar o app Expo
+---
 
-Volte ao diretório raiz do projeto e execute:
+### 🐳 Executando com Docker
 
-```bash
-cd ..
-npm start
-```
+Se preferir rodar toda a aplicação de forma automatizada e isolada utilizando contêineres Docker, nós fornecemos configurações prontas para Docker Compose.
 
-Ou use comandos específicos:
+#### 1. Executar tudo (Backend + Frontend Web)
+Certifique-se de configurar as variáveis de ambiente necessárias e execute:
+bash
+docker-compose up --build
 
-```bash
-npm run android
-npm run ios
-npm run web
-```
+* O Backend estará acessível em http://localhost:3003.
+* O Frontend Web (servido via Nginx) estará acessível em http://localhost:80.
 
-### 8. Testar a aplicação
+#### 2. Executar apenas o Backend
+Ideal para rodar no servidor EC2 do backend ou para desenvolvimento local simplificado:
+bash
+docker-compose -f docker-compose.backend.yml up -d --build
 
-- Verifique se o backend respondeu com sucesso em `http://localhost:3003/api`
-- Abra o app no Expo
-- Realize login, cadastro e navegação pelas telas do dashboard
 
-### 9. Observações importantes
-
-- `backend/src/server.js` depende de `POSTGRES_URL`, `MONGODB_URI`, `JWT_SECRET` e `CORS_ORIGINS`
-- `src/lib/api.ts` depende de `EXPO_PUBLIC_API_URL` e `EXPO_PUBLIC_NEXT_API_URL`
-- `src/lib/supabase.ts` depende de `EXPO_PUBLIC_SUPABASE_URL` e `EXPO_PUBLIC_SUPABASE_ANON_KEY`
-
-### 10. Dicas para produção
-
-- Nunca comite arquivos `.env`
-- Use serviços gerenciados para PostgreSQL e MongoDB ou contêineres Docker seguros
-- Restrinja `CORS_ORIGINS` apenas aos domínios permitidos
-- Proteja `JWT_SECRET` e chaves AWS
+#### 3. Executar apenas o Frontend Web
+Ideal para rodar no servidor EC2 do frontend:
+bash
+docker-compose -f docker-compose.frontend.yml up -d --build
 
 ## 👥 EQUIPE
 
