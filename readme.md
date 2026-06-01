@@ -137,7 +137,7 @@ Calcule e visualize os benefícios fiscais da sua produção de energia sustent�
 
 ##  🖥️ **Integrações AWS**
 
-<img width="1149" height="1073" alt="Image" src="https://github.com/user-attachments/assets/2fbb2ad3-e16a-4511-8ea5-5a09f5506b06" />
+<img src="https://github.com/user-attachments/assets/2fbb2ad3-e16a-4511-8ea5-5a09f5506b06" width="1149" height="1073" alt="Esquema da nuvem"/>
 
 - **S3:** Armazenamento de fotos de perfil.
   
@@ -317,16 +317,6 @@ docker-compose up --build
 * O Backend estará acessível em http://localhost:3003.
 * O Frontend Web (servido via Nginx) estará acessível em http://localhost:80.
 
-#### 2. Executar apenas o Backend
-Ideal para rodar no servidor EC2 do backend ou para desenvolvimento local simplificado:
-bash
-docker-compose -f docker-compose.backend.yml up -d --build
-
-
-#### 3. Executar apenas o Frontend Web
-Ideal para rodar no servidor EC2 do frontend:
-bash
-docker-compose -f docker-compose.frontend.yml up -d --build
 
 ## 👥 EQUIPE
 
@@ -341,7 +331,7 @@ docker-compose -f docker-compose.frontend.yml up -d --build
     <tr>
       <td>Alessandro Rodrigues</td>
       <td>
-       <a href="[https://github.com/FernandoRSantos](https://github.com/alerodriguesm02)" target="_blank">
+       <a href="https://github.com/alerodriguesm02" target="_blank">
           <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Alessandro Rodrigues">
         </a>
       </td>
