@@ -137,7 +137,8 @@ Calcule e visualize os benefícios fiscais da sua produção de energia sustent�
 
 ##  🖥️ **Integrações AWS**
 
-<img src="https://github.com/user-attachments/assets/2fbb2ad3-e16a-4511-8ea5-5a09f5506b06" width="1149" height="1073" alt="Esquema da nuvem"/>
+![esquema aws](https://github.com/guipiva/Readme-Biogen/blob/master/Imagem-aws.jpeg?raw=true)
+
 
 - **S3:** Armazenamento de fotos de perfil.
   
